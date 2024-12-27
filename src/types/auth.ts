@@ -4,3 +4,8 @@ export type SignUpType = {
     email: string;
     password: string;
 }
+
+export type LogInType = {
+    email: string;
+    password: string;
+}

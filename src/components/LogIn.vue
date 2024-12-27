@@ -1,18 +1,15 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from 'vue';
+import type { LogInType } from '../types/auth'
 import { RouterLink } from 'vue-router'
 
-import type { SignUpType } from '../types/auth'
-
-const signUpData = ref<SignUpType>({
-    firstname: "",
-    lastname: "",
+const LogInData = ref<LogInType>({
     email: "",
     password: ""
 })
 
-const handleSign = () => {
-    console.log(signUpData.value)
+const handleLog = () => {
+    console.log(LogInData.value)
 }
 </script>
 
@@ -25,32 +22,24 @@ const handleSign = () => {
 
             <div class="col-xl-5">
                 <div>
-                    <h2>Sign Up</h2>
+                    <h2>Log In</h2>
 
                     <form>
                         <div class="mb-3">
-                            <label for="firstname" class="form-label">First Name</label>
-                            <input type="text" class="form-control" id="firstname" required v-model="signUpData.firstname"/>
-                        </div>
-                        <div class="mb-3">
-                            <label for="lastname" class="form-label">Last Name</label>
-                            <input type="text" class="form-control" id="lastname" required v-model="signUpData.lastname"/>
-                        </div>
-                        <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" required v-model="signUpData.email"/>
+                            <input type="email" class="form-control" id="email" required v-model="LogInData.email"/>
                         </div>
                         <div class="mb-3">
                             <label for="password" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="password" required v-model="signUpData.password"/>
+                            <input type="password" class="form-control" id="password" required v-model="LogInData.password"/>
                         </div>
                             <div class="mb-3">
-                            <button type="submit" class="btn btn-primary w-100" @click.prevent="handleSign">Sign Up</button>
+                            <button type="submit" class="btn btn-primary w-100" @click.prevent="handleLog">Log In</button>
                         </div>
                         <div class="mb-3">
                             <p>
-                                <router-link to="/login">
-                                    Already have an account? Log in!
+                                <router-link to="/signup">
+                                    Don't have an account? Sign up!
                                 </router-link>
                             </p>
                         </div>

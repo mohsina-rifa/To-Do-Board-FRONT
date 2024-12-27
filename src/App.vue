@@ -1,19 +1,16 @@
 <script setup lang="ts">
-import SignUp from './components/SignUp.vue'
+import { RouterView } from 'vue-router'
+
 </script>
 
 <template>
-  <div id="app">
-    <SignUp />
+  <div class="container-fluid">
+    <div id="app">
+      <RouterView />
+    </div>
   </div>
 </template>
 
 <style scoped>
-html, body, #app {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  display: block;
-}
+
 </style>
