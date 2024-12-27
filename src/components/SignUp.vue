@@ -66,12 +66,4 @@ const handleSign = () => {
   margin: 0;
   padding: 0;
 }
-
-.background-image-container {
-  background-image: url('@/assets/SignupPage.jpg');
-  background-size: cover;
-  background-position: center;
-  width: 100vh;
-  height: auto;
-}
 </style>
