@@ -5,9 +5,7 @@ import { RouterView } from 'vue-router'
 
 <template>
   <div class="container-fluid">
-    <div id="app">
-      <RouterView />
-    </div>
+    <RouterView />
   </div>
 </template>
 
